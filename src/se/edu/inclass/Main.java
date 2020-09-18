@@ -44,7 +44,7 @@ public class Main {
 
     public static void printSortedDataUsingStreams(ArrayList<Task> tasksData){
         tasksData.stream()
-                .filter(t -> t instanceof Deadline)
+                .filter(s -> s instanceof Deadline)
                 .sorted((a,b) -> a.getDescription().toLowerCase().compareTo(b.getDescription().toLowerCase()))
                 .forEach(System.out::println);
     }
